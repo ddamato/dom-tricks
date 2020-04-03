@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ddamato/dom-tricks/issues"
   },
-  "homepage": "https://github.com/ddamato/dom-tricks#readme"
+  "homepage": "https://github.com/ddamato/dom-tricks#readme",
+  "devDependencies": {
+    "dox": "^0.9.0"
+  }
 }
