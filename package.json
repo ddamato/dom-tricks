@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "node ./bin/compilePages.js && cp ./src/styles.css ./public/styles.css",
     "test": "mocha"
   },
   "repository": {

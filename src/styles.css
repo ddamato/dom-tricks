@@ -1,0 +1,24 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Proza Libre', sans-serif;
+}
+
+main {
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+}
+
+pre.prettyprint.prettyprinted {
+  font-size: 1.2rem;
+  padding: 1rem;
+  overflow-x: auto;
+}

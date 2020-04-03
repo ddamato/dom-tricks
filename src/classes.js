@@ -1,6 +1,12 @@
 const Page = require('../lib/page.js');
 
-module.exports = new Page('Add or remove class from an element')
+module.exports = new Page('Add or remove class from an element', () => {
+  /**
+   * This page outlines how to add and remove classes
+   * - bullet point 1
+   * - bullet point 2
+   */
+})
 .section('Add a class to an element', (elem) => {
 
   /**

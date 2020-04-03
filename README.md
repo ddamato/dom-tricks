@@ -1,1 +1,1 @@
-# dom-tricks
+# DOM-Tricks
