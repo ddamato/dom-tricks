@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/ddamato/dom-tricks#readme",
   "devDependencies": {
-    "dox": "^0.9.0"
+    "assume": "^2.2.0",
+    "dox": "^0.9.0",
+    "fs-extra": "^9.0.0",
+    "glob": "^7.1.6",
+    "jsdom": "^16.2.2",
+    "mocha": "^7.1.1"
   }
 }
