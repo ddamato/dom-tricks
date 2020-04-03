@@ -1,0 +1,20 @@
+{
+  "name": "dom-tricks",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddamato/dom-tricks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ddamato/dom-tricks/issues"
+  },
+  "homepage": "https://github.com/ddamato/dom-tricks#readme"
+}
