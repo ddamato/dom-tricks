@@ -3,7 +3,7 @@
 }
 
 :root {
-  --color-accent: #ff5722;
+  --color-accent: #4466ff;
   --color-onAccent: #fff;
   --color-background: #fff;
   --color-onBackground: #000;
@@ -14,11 +14,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--color-background);
   color: var(--color-onBackground);
+  -webkit-overflow-scrolling: auto;
 }
 
 h1, h2, h3 {
   font-family: 'Proza Libre', sans-serif;
   margin: 0 0 1em;
+  color: var(--color-accent);
 }
 
 main {
