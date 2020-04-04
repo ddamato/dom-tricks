@@ -1,13 +1,7 @@
 const Page = require('../lib/page.js');
 
-module.exports = new Page('Add or remove class from an element', () => {
-  /**
-   * This page outlines how to add and remove classes
-   * - bullet point 1
-   * - bullet point 2
-   */
-})
-.section('Add a class to an element', (elem) => {
+module.exports = new Page('Add or remove class from an element')
+.section('Add a class to an element', ({ elem }) => {
 
   /**
    * Note that multiple parameters for the `add()` isn't supported in IE 11.
@@ -18,7 +12,7 @@ module.exports = new Page('Add or remove class from an element', () => {
   elem.classList.add('several', 'class-names');
 
 })
-.section('Remove a class from an element', (elem) => {
+.section('Remove a class from an element', ({ elem }) => {
 
   /**
    * Note that multiple parameters for the `remove()` isn't supported in IE 11.
@@ -28,7 +22,7 @@ module.exports = new Page('Add or remove class from an element', () => {
   elem.classList.remove('several', 'class-names');
 
 })
-.section('Toggle a class', (elem) => {
+.section('Toggle a class', ({ elem }) => {
 
   elem.classList.toggle('class-name');
 

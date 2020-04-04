@@ -1,8 +1,8 @@
 const expect = require('assume');
 const { JSDOM } = require("jsdom");
-const classes = require('../src/classes.js');
+const page = require('../src/class-attribute.js');
 
-describe ('classes.js', () => {
+describe ('class-attribute.js', () => {
 
   let dom, window, document;
 
@@ -13,26 +13,26 @@ describe ('classes.js', () => {
   })
 
   it('should add classes', () => {
-    const contentFn = classes.findContentFn('Add a class to an element');
+    const contentFn = page.findContentFn('Add a class to an element');
     const elem = document.createElement('div');
-    contentFn(elem);
+    contentFn({ elem });
     expect(elem.getAttribute('class')).equals('class-name several class-names');
   });
 
   it('should remove classes', () => {
-    const contentFn = classes.findContentFn('Remove a class from an element');
+    const contentFn = page.findContentFn('Remove a class from an element');
     const elem = document.createElement('div');
     elem.classList.add('class-name'); // add a class
-    contentFn(elem);
+    contentFn({ elem });
     expect(elem.getAttribute('class')).equals('');
   });
 
   it('should toggle classes', () => {
-    const contentFn = classes.findContentFn('Toggle a class');
+    const contentFn = page.findContentFn('Toggle a class');
     const elem = document.createElement('div');
-    contentFn(elem); // toggle on
+    contentFn({ elem }); // toggle on
     expect(elem.getAttribute('class')).equals('class-name');
-    contentFn(elem); // toggle off
+    contentFn({ elem }); // toggle off
     expect(elem.getAttribute('class')).equals('');
   });
 
