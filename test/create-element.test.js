@@ -12,7 +12,7 @@ describe ('create-element.js', () => {
     document = window.document;
   })
 
-  it('create a div', () => {
+  it('should create a div', () => {
     const contentFn = page.findContentFn('Create a div');
     let elem;
     const callback = (e) => elem = e;
@@ -20,7 +20,7 @@ describe ('create-element.js', () => {
     expect(elem.tagName).equals('DIV');
   });
 
-  it('create a text node with text', () => {
+  it('should create a text node with text', () => {
     const contentFn = page.findContentFn('Create a text node and set the content');
     let textNode;
     const callback = (e) => textNode = e;
