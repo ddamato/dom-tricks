@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node ./bin/compilePages.js && cp ./src/styles.css ./public/styles.css",
+    "copy:css": "cp ./src/styles.css ./public/styles.css",
+    "copy:svg": "cp ./src/favicon.svg ./public/favicon.svg",
+    "build": "node ./bin/compilePages.js && npm run copy:css && npm run copy:svg",
     "test": "mocha"
   },
   "repository": {

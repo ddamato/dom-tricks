@@ -27,9 +27,11 @@ module.exports = new Page('Add or remove class from an element', () => {
   elem.classList.remove('class-name');
   elem.classList.remove('several', 'class-names');
 
-}).section('Toggle a class', (elem) => {
+})
+.section('Toggle a class', (elem) => {
 
   elem.classList.toggle('class-name');
 
-});
+})
+.related(['./index.js']);
 
