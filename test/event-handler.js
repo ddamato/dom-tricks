@@ -16,7 +16,7 @@ describe ('event-handler.js', () => {
     const contentFn = page.findContentFn('Add an event handler');
     const elem = document.createElement('div');
     document.body.appendChild(elem);
-    
+
     let clicked;
     const callback = (click) => clicked = click;
     contentFn({ elem, callback });
@@ -24,8 +24,24 @@ describe ('event-handler.js', () => {
     expect(clicked).equals('clicked!');
   });
 
+  it('should self remove after executing', () => {
+    const contentFn = page.findContentFn('Self remove an event handler');
+    const elem = document.createElement('div');
+    document.body.appendChild(elem);
+
+    let clicked;
+    const callback = (click) => clicked = click;
+    contentFn({ elem, callback });
+    elem.dispatchEvent(new window.Event('click'));
+    expect(clicked).equals('clicked!');
+
+    clicked = null;
+    elem.dispatchEvent(new window.Event('click'));
+    expect(clicked).equals(null);
+  });
+
   it('should only fire once', () => {
-    const contentFn = page.findContentFn('Use an event handler once');
+    const contentFn = page.findContentFn('Only fire once');
     const elem = document.createElement('div');
     document.body.appendChild(elem);
 

@@ -23,8 +23,14 @@ module.exports = new Page('Add or remove class from an element')
 
 })
 .section('Toggle a class', ({ elem }) => {
-
+  /** */
   elem.classList.toggle('class-name');
+
+})
+.section('Check for a specific class', ({ elem, callback }) => {
+  /** */
+  const hasClass = elem.classList.contains('class-name');
+  callback(hasClass);
 
 })
 .related(['./index.js']);

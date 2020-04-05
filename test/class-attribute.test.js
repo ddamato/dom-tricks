@@ -36,4 +36,14 @@ describe ('class-attribute.js', () => {
     expect(elem.getAttribute('class')).equals('');
   });
 
+  it('should check for a class', () => {
+    const contentFn = page.findContentFn('Check for a specific class');
+    const elem = document.createElement('div');
+    elem.classList.add('class-name'); // add a class
+    let hasClass;
+    const callback = (bool) => hasClass = bool;
+    contentFn({ elem, callback });
+    expect(hasClass).to.be.true();
+  });
+
 });
