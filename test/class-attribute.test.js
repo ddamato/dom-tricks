@@ -2,7 +2,7 @@ const expect = require('assume');
 const { JSDOM } = require("jsdom");
 const page = require('../src/class-attribute.js');
 
-describe ('class-attribute.js', () => {
+describe(page.title, () => {
 
   let dom, window, document;
 

@@ -2,7 +2,7 @@ const expect = require('assume');
 const { JSDOM } = require("jsdom");
 const page = require('../src/click-outside.js');
 
-describe ('click-outside.js', () => {
+describe(page.title, () => {
 
   let window, document;
 

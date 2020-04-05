@@ -2,7 +2,7 @@ const expect = require('assume');
 const { JSDOM } = require("jsdom");
 const page = require('../src/event-handler.js');
 
-describe ('event-handler.js', () => {
+describe(page.title, () => {
 
   let window, document;
 
