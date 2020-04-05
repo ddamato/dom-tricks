@@ -93,6 +93,10 @@ section {
   box-shadow: var(--shadow);
 }
 
+.desc a {
+  color: var(--color-accent);
+}
+
 p code {
   display: inline-block;
   background-color: var(--color-subtle);
@@ -126,6 +130,13 @@ footer {
   padding: .5rem 1rem;
   font-weight: bolder;
   letter-spacing: 1px;
+  margin: .5rem 0;
+  transition: .218s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-onAccent);
+  background-color: var(--color-accent);
 }
 
 @media (max-width: 400px) {
