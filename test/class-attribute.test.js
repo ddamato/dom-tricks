@@ -31,9 +31,9 @@ describe(page.title, () => {
     const contentFn = page.findContentFn('Toggle a class');
     const elem = document.createElement('div');
     contentFn({ elem }); // toggle on
-    expect(elem.getAttribute('class')).equals('class-name');
+    expect(elem.getAttribute('class')).equals('class-name it-depends');
     contentFn({ elem }); // toggle off
-    expect(elem.getAttribute('class')).equals('');
+    expect(elem.getAttribute('class')).equals('it-depends');
   });
 
   it('should check for a class', () => {

@@ -15,10 +15,13 @@ describe(page.title, () => {
   it('should set and get inline styles', () => {
     const contentFn = page.findContentFn('Set and get inline styles');
     const elem = document.createElement('div');
-    let size;
-    const callback = (fontSize) => size = fontSize;
+    let size, color;
+    const callback = (fontSize, backgroundColor) => {
+      size = fontSize, color = backgroundColor;
+    };
     contentFn({ elem, callback });
     expect(size).equals('1rem');
+    expect(color).equals('');
   });
 
   it('should get computed computed background color', () => {
@@ -31,7 +34,7 @@ describe(page.title, () => {
   });
 
   it('should get the default display for div', () => {
-    const contentFn = page.findContentFn('Get the default value');
+    const contentFn = page.findContentFn('Get the default styles');
     let block;
     const callback = (display) => block = display;
     contentFn({ window, document, callback });
