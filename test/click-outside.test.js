@@ -1,5 +1,5 @@
 const expect = require('assume');
-const { JSDOM } = require("jsdom");
+const { JSDOM } = require('jsdom');
 const page = require('../src/click-outside.js');
 
 describe(page.title, () => {

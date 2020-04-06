@@ -1,5 +1,5 @@
 const expect = require('assume');
-const { JSDOM } = require("jsdom");
+const { JSDOM } = require('jsdom');
 const page = require('../src/class-attribute.js');
 
 describe(page.title, () => {

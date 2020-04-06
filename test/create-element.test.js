@@ -1,5 +1,5 @@
 const expect = require('assume');
-const { JSDOM } = require("jsdom");
+const { JSDOM } = require('jsdom');
 const page = require('../src/create-element.js');
 
 describe(page.title, () => {
