@@ -4,10 +4,10 @@ const page = require('../src/css-styles.js');
 
 describe(page.title, () => {
 
-  let dom, window, document;
+  let window, document;
 
   beforeEach(() => {
-    dom = new JSDOM(`<!DOCTYPE html><html><head></head><body></body></html>`);
+    const dom = new JSDOM(`<!DOCTYPE html><html><head></head><body></body></html>`);
     window = dom.window;
     document = window.document;
   })
