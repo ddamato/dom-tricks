@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "create": "node ./bin/initPage.js",
     "purge": "rm -rf ./public",
     "copy:css": "cp ./src/styles.css ./public/styles.css",
     "copy:svg": "cp ./src/favicon.svg ./public/favicon.svg",
