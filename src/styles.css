@@ -41,7 +41,8 @@ main {
 }
 
 .max-width {
-  max-width: 600px;
+  display: block;
+  max-width: 50rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -97,6 +98,14 @@ section {
   color: var(--color-accent);
 }
 
+.github-link {
+  color: var(--color-accent);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  text-align: right;
+  font-size: .8rem;
+}
+
 p code {
   display: inline-block;
   background-color: var(--color-subtle);
@@ -139,9 +148,13 @@ footer {
   background-color: var(--color-accent);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+  :root {
+    font-size: 20px;
+  }
+
   header p {
-    display: none;
+    display: none !important;
   }
 
   main > h2 {
