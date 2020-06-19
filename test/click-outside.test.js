@@ -23,4 +23,18 @@ describe(page.title, () => {
     expect(isOutside).to.be.true();
   });
 
+  it('should detect outside clicks from ShadowDOM', () => {
+    const contentFn = page.findContentFn('Detect clicks outside, ShadowDOM solution');
+    const div = document.createElement('div');
+    div.attachShadow({ mode: 'open' });
+    const elem = document.createElement('span');
+    div.shadowRoot.appendChild(elem);
+    document.body.appendChild(div);
+    let isOutside;
+    const callback = (click) => isOutside = click;
+    contentFn({ document, elem, callback });
+    document.dispatchEvent(new window.Event('click'));
+    expect(isOutside).to.be.true();
+  });
+
 });
