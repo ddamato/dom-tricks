@@ -24,7 +24,17 @@ module.exports = new Page('Managing CSS styles', () => {
   // backgroundColor === '' because we did not set this property, it will not determine what the default value is either
   const backgroundColor = elem.style.backgroundColor;
 
-  callback(fontSize, backgroundColor);
+  /**
+   * You can also get and set using the snake-case property by using some built-in methods
+   */
+
+  // Set the font-weight to 700
+  elem.style.setProperty('font-weight', 700);
+
+  // fontWeight === '700', this returns a string since it's an HTML attribute value.
+  const fontWeight = elem.style.getPropertyValue('font-weight');
+
+  callback(fontSize, backgroundColor, fontWeight);
 })
 .section('Get computed styles', ({ window, document, elem, callback }) => {
   /** 

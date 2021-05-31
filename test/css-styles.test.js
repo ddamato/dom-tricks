@@ -15,13 +15,14 @@ describe(page.title, () => {
   it('should set and get inline styles', () => {
     const contentFn = page.findContentFn('Set and get inline styles');
     const elem = document.createElement('div');
-    let size, color;
-    const callback = (fontSize, backgroundColor) => {
-      size = fontSize, color = backgroundColor;
+    let size, color, weight;
+    const callback = (fontSize, backgroundColor, fontWeight) => {
+      size = fontSize, color = backgroundColor, weight = fontWeight; 
     };
     contentFn({ elem, callback });
     expect(size).equals('1rem');
     expect(color).equals('');
+    expect(weight).equals('700');
   });
 
   it('should get computed computed background color', () => {
