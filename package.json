@@ -23,12 +23,12 @@
   },
   "homepage": "https://github.com/ddamato/dom-tricks#readme",
   "devDependencies": {
-    "assume": "^2.2.0",
+    "assume": "^2.3.0",
     "dox": "^0.9.0",
-    "fs-extra": "^9.0.0",
-    "glob": "^7.1.6",
+    "fs-extra": "^10.0.0",
+    "glob": "^7.1.7",
     "htmlclean": "^3.0.8",
-    "jsdom": "^16.2.2",
-    "mocha": "^7.2.0"
+    "jsdom": "^16.6.0",
+    "mocha": "^8.4.0"
   }
 }
